@@ -1,5 +1,5 @@
 # pattern-matching-with-nfa
-A flexible pattern matching implementation using Non-deterministic Finite Automata (NFA). This project provides an efficient way to perform pattern matching by converting patterns into NFAs and using them to search through text, implemented in modern C++.
+A simple pattern matching implementation using Non-Deterministic Finite Automata (NFA). This project provides an efficient way to perform pattern matching by converting patterns into NFAs and using them to search through text, implemented in modern C++.
 
 ##  Features
 * Pattern to NFA conversion
