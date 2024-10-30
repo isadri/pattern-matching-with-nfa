@@ -1,0 +1,10 @@
+grammar.bnf
+build/
+tests/
+Makefile
+.vscode/
+a.out
+fsm.tldr
+impl.tldr
+.DS_Store
+
