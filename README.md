@@ -9,7 +9,6 @@ A flexible pattern matching implementation using Non-deterministic Finite Automa
     * Union (|)
     * Kleene star (*)
     * Optional character (?)
-    * Character classes ([a-z], [0-9])
 * Memory-efficient NFA implementation
 * Header-only library option
 * Modern C++ implementation (C++17)
