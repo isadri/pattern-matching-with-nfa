@@ -9,14 +9,15 @@ A simple pattern matching implementation using Non-Deterministic Finite Automata
     * Union (|)
     * Kleene star (*)
     * Optional character (?)
+    * Character classes (\w, \d)
 * Memory-efficient NFA implementation
 * Header-only library option
 * Modern C++ implementation (C++17)
 * No external dependencies
 
 ## Prerequisites
-* C++17 compatible compiler (GCC 7+, Clang 5+, or MSVC 2017+)
-* CMake 3.12 or higher
+* C++14 compatible compiler
+* CMake 3.30 or higher
 * Git (for cloning the repository)
 
 ## Building the Project
