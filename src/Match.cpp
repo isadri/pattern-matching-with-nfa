@@ -54,7 +54,7 @@ void    Match::display(const char* text) {
 
     while (text[i]) {
         if (start < _positions.size() && i == _positions[start].first) {
-            result += "\033[1;32m";
+            result += "\033[32m";
             while (i < _positions[start].second && text[i])
                 result += text[i++];
             result += "\033[0m";
@@ -64,5 +64,14 @@ void    Match::display(const char* text) {
             result += text[i++];
         }
     }
-    std::cout << "    \033[1;35m->\033[0m " << result << '\n';
+    i = 0;
+    std::cout << "    \033[32m->\033[0m " << result << '\n';
+    std::cout << "       \033[32m";
+    for (start = 0; start < _positions.size(); ++start) {
+        for (; i < _positions[start].first; ++i)
+            std::cout << '-';
+        for (; i < _positions[start].second; ++i)
+            std::cout << '^';
+    }
+    std::cout << "\033[0m\n";
 }
