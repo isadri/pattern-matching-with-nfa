@@ -1,5 +1,5 @@
-#include "../include/Expr.hpp"
-#include "../include/Visitor.hpp"
+#include <Expr.hpp>
+#include <Visitor.hpp>
 
 Expr::~Expr() = default;
 

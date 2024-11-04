@@ -1,4 +1,4 @@
-#include "../include/Parser.hpp"
+#include <Parser.hpp>
 #include <iostream>
 #include <algorithm>
 
@@ -60,12 +60,31 @@ std::shared_ptr<Expr>   Parser::atom() {
         if (match({'d'}))
             return make_range_node('0', '9');
         if (match({'w'}))
-            return make_range_node('a', 'z');
+            return make_word_node();
         return std::make_shared<Symbol>(advance());
     }
     if (non_metachar())
         return std::make_shared<Symbol>(advance());
     throw std::runtime_error("bad regexp.");
+}
+
+std::shared_ptr<Expr>   Parser::make_word_node() {
+    std::shared_ptr<Expr>   expr{ std::make_shared<Symbol>('a') };
+    std::shared_ptr<Expr>   right{ nullptr };
+
+    for (int i = 'b'; i <= 'z'; ++i) {
+        right = std::make_shared<Symbol>(i);
+        expr = std::make_shared<Alt>(expr, right);
+    }
+    for (int i = 'A'; i <= 'Z'; ++i) {
+        right = std::make_shared<Symbol>(i);
+        expr = std::make_shared<Alt>(expr, right);
+    }
+    for (int i = '0'; i <= '9'; ++i) {
+        right = std::make_shared<Symbol>(i);
+        expr = std::make_shared<Alt>(expr, right);
+    }
+    return std::make_shared<Alt>(expr, std::make_shared<Symbol>('_'));
 }
 
 std::shared_ptr<Expr>   Parser::make_range_node(int first, int last) {

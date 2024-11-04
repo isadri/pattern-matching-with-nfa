@@ -1,4 +1,4 @@
-#include "../include/State.hpp"
+#include <State.hpp>
 
 State::State(int c, State* o1, State* o2)
     : c(c)

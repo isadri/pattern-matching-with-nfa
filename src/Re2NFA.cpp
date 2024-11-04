@@ -1,6 +1,6 @@
-#include "../include/State.hpp"
-#include "../include/Re2NFA.hpp"
-#include "../include/Parser.hpp"
+#include <State.hpp>
+#include <Re2NFA.hpp>
+#include <Parser.hpp>
 #include <iostream>
 
 State*  Re2NFA::start(const char* re) {

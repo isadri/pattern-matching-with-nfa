@@ -27,4 +27,5 @@ private:
     static bool metachar() noexcept;
 
     static std::shared_ptr<Expr>    make_range_node(int first, int last);
+    static std::shared_ptr<Expr>    make_word_node();
 };

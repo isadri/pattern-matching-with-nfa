@@ -1,5 +1,5 @@
-#include "../include/NFASim.hpp"
-#include "../include/Re2NFA.hpp"
+#include <NFASim.hpp>
+#include <Re2NFA.hpp>
 #include <algorithm>
 #include <iostream>
 

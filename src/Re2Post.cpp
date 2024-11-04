@@ -1,4 +1,4 @@
-#include "../include/Re2Post.hpp"
+#include <Re2Post.hpp>
 
 void    Re2Post::run(Expr* expr) {
     expr->accept(*this);
