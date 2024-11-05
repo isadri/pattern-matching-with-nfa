@@ -11,7 +11,7 @@ class   NFASim {
 public:
     NFASim() = delete;
 
-    static bool match(const char* re, const char* text);
+    static bool run(const char* re, const char* text);
 
 //private:
     static StateStack                           _old_states;

@@ -9,7 +9,7 @@ StateStack                          NFASim::_new_states;
 std::unordered_map<State*, bool>    NFASim::_already_on;
 std::set<State*>                    NFASim::_states;
 
-bool    NFASim::match(const char* re, const char* text) {
+bool    NFASim::run(const char* re, const char* text) {
     Re2NFA  nfa;
     State*  start{ nfa.start(re) };
 

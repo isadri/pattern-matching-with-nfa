@@ -20,7 +20,7 @@ void    Match::from_prompt() {
 
     write(1, "\033[1;33m>>\033[0m ", 14);
     while (std::getline(std::cin, line)) {
-        if (NFASim::match(_re, line.c_str()))
+        if (NFASim::run(_re, line.c_str()))
             display(line, -1);
         write(1, "\033[1;33m>>\033[0m ", 14);
     }
@@ -38,7 +38,7 @@ void    Match::from_file(const char* file) {
 
     while (std::getline(infile, line)) {
         ++nline;
-        if (NFASim::match(_re, line.c_str()))
+        if (NFASim::run(_re, line.c_str()))
             display(line, nline);
     }
 }
