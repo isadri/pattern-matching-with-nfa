@@ -10,6 +10,7 @@ A simple pattern matching implementation using Non-Deterministic Finite Automata
     * Kleene star (*)
     * Optional character (?)
     * Character classes (\w, \d)
+    * Wildcard (.)
 * Memory-efficient NFA implementation
 * Header-only library option
 * Modern C++ implementation (C++17)
