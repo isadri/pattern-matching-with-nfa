@@ -60,7 +60,7 @@ After building the project, you can run the NFA pattern matching executable:
 ./match [regexp] [file]?
 ```
 
-Replace `regexp` with the regular expression you want to match, and if you want to use the regular expression on a file you can specify the file the `file` argument.
+Replace `regexp` with the regular expression you want to match, and if you want to use the regular expression on a file you can specify the file name in the `file` argument.
 
 If you omit the `file` argument, the program will read from the standard input.
 
