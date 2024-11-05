@@ -3,6 +3,7 @@
 #include <Parser.hpp>
 #include <algorithm>
 #include <iostream>
+#include <vector>
 
 StateStack                          NFASim::_old_states;
 StateStack                          NFASim::_new_states;
@@ -20,8 +21,12 @@ bool    NFASim::run(const char* re, const char* text) {
         next_set(*p);
     }
     fill_set();
-    return std::any_of(_states.begin(), _states.end(),
+
+    bool    result = std::any_of(_states.begin(), _states.end(),
                     [](State* s) { return s->c == ACCEPT; });
+
+    free_list(start);
+    return result;
 }
 
 void    NFASim::next_set(int c) {
@@ -80,4 +85,15 @@ void    NFASim::reset() noexcept {
     _new_states = StateStack();
     _states.clear();
     _already_on.clear();
+}
+
+void    NFASim::free_list(State* state) {
+    static std::vector<State*>  states;
+
+    if (!state || std::find(states.begin(), states.end(), state) != states.end())
+        return;
+    states.push_back(state);
+    free_list(state->out1);
+    free_list(state->out2);
+    delete state;
 }

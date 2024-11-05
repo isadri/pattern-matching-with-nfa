@@ -45,7 +45,12 @@ void    Match::from_file(const char* file) {
 
 void    Match::display(const std::string& text, ssize_t nline) {
     const size_t    index = text.find_first_not_of(" \t");
-    std::string     trimmed(text.substr(index));
+    std::string     trimmed;
+
+    if (index != std::string::npos)
+        trimmed = text.substr(index);
+    else
+        trimmed = text;
 
     if (nline == -1) {
         std::cout << "    \033[32m->\033[0m " << trimmed;
