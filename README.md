@@ -13,11 +13,11 @@ A simple pattern matching implementation using Non-Deterministic Finite Automata
     * Wildcard (.)
 * Memory-efficient NFA implementation
 * Header-only library option
-* Modern C++ implementation (C++17)
+* Modern C++ implementation (C++11)
 * No external dependencies
 
 ## Prerequisites
-* C++14 compatible compiler
+* C++11 compatible compiler
 * CMake 3.30 or higher
 * Git (for cloning the repository)
 
