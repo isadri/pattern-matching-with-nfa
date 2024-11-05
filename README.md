@@ -11,7 +11,7 @@ A simple pattern matching implementation using Non-Deterministic Finite Automata
     * Positive closure (+).
     * Optional character (?).
     * Character classes (\w, \d).
-    * Wildcard (.).
+    * Wildcard character (.).
 * Memory-efficient NFA implementation.
 * Header-only library option.
 * Modern C++ implementation (C++11).
