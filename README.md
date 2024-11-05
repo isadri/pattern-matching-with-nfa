@@ -66,4 +66,4 @@ If you omit the `file` argument, the program will read from the standard input.
 
 ## Resources
 * [https://swtch.com/~rsc/regexp/regexp1.html](https://swtch.com/~rsc/regexp/regexp1.html)
-* [https://www.amazon.com/Compilers-Principles-Techniques-Tools-2nd/dp/0321486811](Compilers:%20Principles,%20Techniques,%20and Tools)
+* [Compilers: Principles, Techniques, and Tools](https://www.amazon.com/Compilers-Principles-Techniques-Tools-2nd/dp/0321486811)
