@@ -13,7 +13,7 @@ public:
 
     static bool run(const char* re, const char* text);
 
-//private:
+private:
     static StateStack                           _old_states;
     static StateStack                           _new_states;
     static std::unordered_map<State*, bool>     _already_on;

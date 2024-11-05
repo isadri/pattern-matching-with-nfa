@@ -16,7 +16,7 @@ public:
     virtual void visitAtomExpr(const Atom& expr) override;
     virtual void visitSymbolExpr(const Symbol& expr) override;
 
-//private:
+private:
     std::stack<Fragment>    _fragments;
     std::shared_ptr<State>  _b;
 

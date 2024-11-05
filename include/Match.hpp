@@ -10,7 +10,7 @@ public:
     static void match(const char* re, const char* file);
 
 private:
-    static char*                                    _re;
+    static char*    _re;
 
     static void from_prompt();
     static void from_file(const char* file);
