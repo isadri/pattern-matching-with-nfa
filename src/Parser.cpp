@@ -63,6 +63,9 @@ std::shared_ptr<Expr>   Parser::atom() {
             return make_word_node();
         return std::make_shared<Symbol>(advance());
     }
+    if (match({'.'})) {
+        return std::make_shared<Rept>(std::make_shared<Symbol>(WIDLCARD), '?');
+    }
     if (non_metachar())
         return std::make_shared<Symbol>(advance());
     throw std::runtime_error("bad regexp.");

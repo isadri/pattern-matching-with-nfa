@@ -3,6 +3,8 @@
 #include <initializer_list>
 #include "Expr.hpp"
 
+const int   WIDLCARD = -1;
+
 class   Parser {
 public:
     static std::shared_ptr<Expr>    parse(const char* re);

@@ -1,5 +1,6 @@
 #include <NFASim.hpp>
 #include <Re2NFA.hpp>
+#include <Parser.hpp>
 #include <algorithm>
 #include <iostream>
 
@@ -55,6 +56,8 @@ void    NFASim::swap_states() {
 }
 
 State*  NFASim::move(State* state, int c) noexcept {
+    if (state->c == WIDLCARD)
+        return state->out1;
     return state->c == c ? state->out1 : nullptr;
 }
 
