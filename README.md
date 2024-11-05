@@ -55,3 +55,15 @@ cmake --build . --config Release
 
 ## Usage
 
+After building the project, you can run the NFA pattern matching executable:
+```bash
+./build/match [regexp] [file]?
+```
+
+Replace `regexp` with the regular expression you want to match, and if you want to use the regular expression on a file you can specify the file the `file` argument.
+
+If you omit the `file` argument, the program will read from the standard input.
+
+## Resources
+* [https://swtch.com/~rsc/regexp/regexp1.html](https://swtch.com/~rsc/regexp/regexp1.html)
+* [https://www.amazon.com/Compilers-Principles-Techniques-Tools-2nd/dp/0321486811](Compilers: Principles, Techniques, and Tools)
