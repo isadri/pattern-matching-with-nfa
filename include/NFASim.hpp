@@ -26,5 +26,5 @@ private:
     static void             reset() noexcept;
     static State*           pop(StateStack& states);
     static void             fill_set();
-    static void             free_list(State* start);
+    static void             free_list(State* state);
 };
